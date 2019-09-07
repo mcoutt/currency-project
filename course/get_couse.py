@@ -14,13 +14,13 @@ def get_course(cur_name='usd'):
 
 
 @app.task()
-def save_data():
+def save_currency_data():
     while True:
         get_value = get_course()
         save_btc = Course.objects.create(currency_name='BTC', currency_value=get_value)
         save_btc.save()
-        time.sleep(5)
+        time.sleep(10)
 
 
 if __name__ == '__main__':
-    save_data()
+    save_currency_data()
