@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BTC Course</title>
+</head>
+<body>
+    <h3>Introduce of actual BTC course data</h3>
+    <p>{{ data }}</p>
+    {% if context.another_currency %}
+        {% for i in context.another_currency %}
+            <p>{{ i.currency_name }}
+            {{ i.currency_value }}</p>
+        {% endfor %}
+    {% endif %}
+    <form action="/" method="post">
+        {% csrf_token %}
+        <p>You can add another currency</p>
+        <input id="currency_name_first" type="text" name="currency_name_first" value={{ currency_name }}><p></p>
+        <input type="submit", value="send">
+    </form>
+</body>
+</html>
