@@ -3,9 +3,6 @@ from django.http import Http404
 from course.models import Course
 from course.get_couse import get_course
 from .forms import CurrencyForm
-import subprocess
-
-process = subprocess.Popen(['python', 'manage.py', 'course/get_course'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 
 def index(request):
