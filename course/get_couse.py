@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as bs
 import time
+from currency.celery import app
 from course.models import Course
 
 
@@ -12,6 +13,7 @@ def get_course(cur_name='usd'):
     return get_num
 
 
+@app.task()
 def save_data():
     while True:
         get_value = get_course()
