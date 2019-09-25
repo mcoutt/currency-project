@@ -5,19 +5,47 @@
     <title>BTC Course</title>
 </head>
 <body>
-    <h3>Introduce of actual BTC course data</h3>
-    <p>{{ data }}</p>
-    {% if context.another_currency %}
+<h3>Introduce of actual BTC course data</h3>
+{% if context.another_currency %}
+    <table>
+        <tr>
+            <td><h4>Currency base</h4></td>
+            <td></td>
+            <td><h4>Currency name</h4></td>
+            <td></td>
+            <td><h4>Currency price</h4></td>
+            <td></td>
+            <td><h4>Date of currency</h4></td>
+        </tr>
+
         {% for i in context.another_currency %}
-            <p>{{ i.currency_name }}
-            {{ i.currency_value }}</p>
+            <tr>
+                <td>{{ i.currency_base }}</td>
+                <td></td>
+                <td>{{ i.currency_target__name }}</td>
+                <td></td>
+                <td>{{ i.currency_value }}</td>
+                <td></td>
+                <td>{{ i.created_date }}</td>
+            </tr>
         {% endfor %}
+    </table>
+{% endif %}
+<p></p>
+<form action="/" method="post">
+    {% csrf_token %}
+    <p>You can add another currency</p>
+
+    {% if context.error %}
+        <h3>
+            <p>For now {{ context.error }}</p>
+            <p>Please select another currency..</p>
+        </h3>
     {% endif %}
-    <form action="/" method="post">
-        {% csrf_token %}
-        <p>You can add another currency</p>
-        <input id="currency_name_first" type="text" name="currency_name_first" value={{ currency_name }}><p></p>
-        <input type="submit", value="send">
-    </form>
+    {% if form %}
+        {{ form.as_p }}
+    {% endif %}
+    <input type="submit" value="send">
+</form>
 </body>
 </html>

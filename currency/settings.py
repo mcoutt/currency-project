@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '99f^d=@stjwb)n6xpxmq=f!0#enph$3zj+t^_(!5%15%%!2##$'
+SECRET_KEY = os.getenv("SKEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'background_task',
     'celery',
+    'django_celery_beat',
 
     'course'
 ]
@@ -80,9 +82,17 @@ WSGI_APPLICATION = 'currency.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv("POSTGRESQL_NAME"),
+        'USER': os.getenv("POSTGRESQL_USER"),
+        'PASSWORD': os.getenv("POSTGRESQL_PASSWORD"),
+        'HOST': os.getenv("POSTGRESQL_HOST"),
+        'PORT': os.getenv("POSTGRESQL_PORT"),
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 }
 
 
@@ -123,3 +133,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CELERY_BEAT_SCHEDULE = {
+    # 'task-number-one': {
+    #     'task': 'app1.tasks.task_number_one',
+    #     'schedule': crontab(minute=59, hour=23),
+    #     'args': (*args)
+    # },
+    # 'task-number-two': {
+    #     'task': 'app2.tasks.task_number_two',
+    #     'schedule': crontab(minute=0, hour='*/3,10-19'),
+    #     'args': (*args)
+    # }
+}

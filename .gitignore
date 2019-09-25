@@ -1,6 +1,8 @@
 
 .idea
 
+course/migrations
+
 __pycache__
 __pycache__/
 __pycache__/*
@@ -9,3 +11,8 @@ db.sqlite3
 
 
 Pipfile.lock
+
+
+currency/.env
+
+celerybeat-schedule.db
