@@ -13,15 +13,15 @@
 
 `python manage.py migrate`
 
-# run RabbitMQ
+# run Redis server
 # - if you use debian like os
-`sudo service rabbitmq start`
+`sudo service redis start`
 
 # and for check status run next command
-`sudo systemctl status rabbitmq.service`
+`sudo systemctl status redis.service`
 
 # - if you use os X like os
-`brew services start rabbitmq`
+`redis-server &`
 
 # run Celery service
 `celery -A currency worker -n c_worker -B -l info -E -Q set_schedule`
