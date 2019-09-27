@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768843f9-ac7a-47e2-8ad9-a193f70e7ecc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/currency.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/currency.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5f8144d5-8edc-4467-9261-e45dd8b412e6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5f8144d5-8edc-4467-9261-e45dd8b412e6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/get_couse.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/get_couse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/migrations/0002_remove_course_modified_date.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_flower.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/currency/celery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/currency/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +197,8 @@
       <workItem from="1568878174948" duration="34614000" />
       <workItem from="1569358160102" duration="358000" />
       <workItem from="1569358945081" duration="187000" />
-      <workItem from="1569360111766" duration="14572000" />
+      <workItem from="1569360111766" duration="14930000" />
+      <workItem from="1569580081135" duration="503000" />
     </task>
     <servers />
   </component>
@@ -233,6 +217,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/course/views.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/currency$views.coverage" NAME="views Coverage Results" MODIFIED="1567855570169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/course" />
