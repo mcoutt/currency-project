@@ -1,3 +1,4 @@
+Django project for collect, modified, store and introduce info about some cryptocurency
 
 # make environmental
 `python3 -m venv venv`
